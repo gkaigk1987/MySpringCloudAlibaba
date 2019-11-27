@@ -17,6 +17,7 @@
         <spring.boot.mapper.version>2.1.5</spring.boot.mapper.version>
         <junit.version>4.12</junit.version>
         <mysql.version>5.1.47</mysql.version>
+        <mybatis.version>3.5.2</mybatis.version>
     </properties>
 
     <licenses>
@@ -109,6 +110,7 @@
                 <artifactId>spring-context-support</artifactId>
                 <version>${alibaba.spring.context.support.version}</version>
             </dependency>
+
             <!-- tk.mybatis -->
             <dependency>
                 <groupId>tk.mybatis</groupId>
@@ -117,15 +119,10 @@
             </dependency>
 
             <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <optional>true</optional>
+                <version>${}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
