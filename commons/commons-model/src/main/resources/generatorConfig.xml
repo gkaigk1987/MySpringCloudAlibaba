@@ -6,6 +6,12 @@
 <generatorConfiguration>
 	
 	<context id="DB2Tables" targetRuntime="MyBatis3">
+
+		<plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+			<!-- 该配置会使生产的Mapper自动继承MyMapper -->
+			<property name="mappers" value="com.gk.cloud.alibaba.commons.tkmapper.MyMapper"/>
+		</plugin>
+
 		<commentGenerator>
 			<property name="suppressDate" value="true" />
 			<property name="addRemarkComments" value="true" />
@@ -41,7 +47,9 @@
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 		
-		 <table tableName="t_user" domainObjectName="User"></table>
+		 <table tableName="t_user" domainObjectName="User"
+				enableCountByExample="false" enableUpdateByExample="false"
+				enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 	</context>
 
 </generatorConfiguration>

@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.gk.cloud.alibaba</groupId>
-        <artifactId>my-spring-cloud-alibaba</artifactId>
+        <artifactId>commons</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>com.gk.cloud.alibaba</groupId>
-    <artifactId>commons</artifactId>
+    <artifactId>commons-tkmapper</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <licenses>
         <license>
@@ -30,14 +30,10 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper-spring-boot-starter</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
-
-    <modules>
-        <module>commons-model</module>
-        <module>commons-tkmapper</module>
-    </modules>
 
 </project>
