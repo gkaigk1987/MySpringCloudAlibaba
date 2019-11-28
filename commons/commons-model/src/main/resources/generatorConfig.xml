@@ -21,7 +21,7 @@
 		<!-- ygf 机器本地MySQL5 -->
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/my_test?serverTimezone=CTT"
 			userId="root"
-			password="gkadmin">
+			password="gk1987">
 		</jdbcConnection>
 
 		<javaTypeResolver>
