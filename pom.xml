@@ -53,8 +53,9 @@
 
     <modules>
         <!--<module>dependencies</module>-->
-        <module>dubbo-provider</module>
         <module>commons</module>
+        <module>dubbo-provider</module>
+        <module>business</module>
     </modules>
 
     <dependencyManagement>
@@ -118,7 +119,7 @@
                     </exclusion>
                     <exclusion>
                         <groupId>javax.servlet</groupId>
-                        <artifactId>servlet-api</artifactId>
+                        <artifactId>javax.servlet-api</artifactId>
                     </exclusion>
                     <exclusion>
                         <groupId>log4j</groupId>
