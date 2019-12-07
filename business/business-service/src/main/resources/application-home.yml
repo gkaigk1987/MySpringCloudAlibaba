@@ -12,8 +12,8 @@ spring:
         server-addr: localhost:8848
 
 dubbo:
-  scan:
-    base-packages: com.gk.cloud.alibaba.business.controller
+#  scan:
+#    base-packages: com.gk.cloud.alibaba.business.controller
   protocol:
     name: dubbo
     port: -1
