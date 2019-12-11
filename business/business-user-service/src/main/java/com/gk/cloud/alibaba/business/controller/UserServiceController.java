@@ -1,5 +1,7 @@
 package com.gk.cloud.alibaba.business.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
+import com.gk.cloud.alibaba.business.controller.fallback.UserServiceFallback;
 import com.gk.cloud.alibaba.commons.model.User;
 import com.gk.cloud.alibaba.provider.api.UserService;
 import org.apache.dubbo.config.annotation.Reference;
@@ -20,6 +22,7 @@ public class UserServiceController {
     private UserService userService;
 
     @GetMapping(value = "/list")
+    @SentinelResource(value = "fallback",fallback = "getUsersFallback",fallbackClass = {UserServiceFallback.class})
     public List<User> getAllUsers(@RequestParam String param) {
         System.out.println("=================" + param + "===============");
         return userService.getUserList();
