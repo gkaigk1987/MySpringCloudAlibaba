@@ -22,6 +22,7 @@ public class UserServiceController {
     private UserService userService;
 
     @GetMapping(value = "/list")
+    //熔断定义
     @SentinelResource(value = "fallback",fallback = "getUsersFallback",fallbackClass = {UserServiceFallback.class})
     public List<User> getAllUsers(@RequestParam String param) {
         System.out.println("=================" + param + "===============");
