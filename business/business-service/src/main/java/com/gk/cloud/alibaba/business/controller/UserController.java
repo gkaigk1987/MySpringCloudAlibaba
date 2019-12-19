@@ -22,6 +22,9 @@ public class UserController {
     private UserServiceFeign userServiceFeign;
 
     @GetMapping(value = "/list")
+    /**
+     * 需要在 sentinel-dashboard 中对 block 进行限流才能触发 getUsersBlock 方法的执行
+     */
     @SentinelResource(value = "block", blockHandler = "getUsersBlock", blockHandlerClass = {UserBlockHandler.class})
     public List<User> getAllUsers(@RequestParam String param) {
         List<User> allUsers = userServiceFeign.getAllUsers(param);

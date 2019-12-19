@@ -10,9 +10,9 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.0.197:8848   #docker环境的nacos
-#    sentinel:
-#      transport:
-#        dashboard: 192.168.0.197:8849
+    sentinel:
+      transport:
+        dashboard: 192.168.0.197:8849
 
 dubbo:
   scan:
